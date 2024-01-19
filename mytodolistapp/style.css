@@ -1,0 +1,163 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* #5b7065, black */
+body {
+  background: rgb(219, 160, 200); 
+  background: -webkit-radial-gradient(center, rgb(193, 124, 187) 0%, rgb(251, 246, 246) 100%);
+  background: -moz-radial-gradient(center, rgb(27, 225, 225) 0%, rgb(4, 91, 122) 100%);
+  background: radial-gradient(rgb(55, 135, 175) 0%, rgb(245, 245, 241) 100%);
+  font-family: Papyrus, fantasy;
+  min-height: 100vh;
+}
+
+button {
+  height: fit-content;
+  cursor: pointer;
+  color: #fefdfd;
+  background-color: rgb(219, 160, 200);
+}
+
+.app {
+  width: 600px;
+  margin: auto;
+  padding-top: 50px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0px 0px 10px 0px;
+}
+/*todolist input*/
+.to-do-input input {
+  width: 250px;
+  font-family: inherit;
+  border:hsl(from color h s l);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 10px;
+  outline: none;
+  font-size: 25px;
+}
+/*enter button*/
+.to-do-input button {
+  color: #ffffff;
+  font-family: inherit;
+  border:hsl(from color h s l);
+  padding: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 25px;
+  transition: .8s;
+  overflow: hidden;
+}
+button:hover{
+  background-color:#1bb80a;
+  transition:.3s;
+}
+
+/*todo list items textarea*/
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding:10px;
+  background-color: rgba(204, 232, 180, 0.836);
+}
+/*tick symbol*/
+.to-do-list i {
+  color: #17df0c;
+  cursor: pointer;
+  padding-top:22px;
+}
+/*edit symbol*/
+.to-do-list .fa-pen-to-square {
+  color: #0d9ff4;
+  padding-right:5px;
+  padding-top:22px;
+}
+/*save,cancel*/
+.to-do-list button {
+  padding: 10px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  font-size: 15px;
+}
+/*textbox of todo items*/
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 10px;
+  padding: 0px;
+  box-shadow: 0px 2px 4px 0px rgba(117, 198, 25, 0.5);
+}
+
+.input-controller {
+  display: flex;
+  gap: 10px;
+}
+
+/*text in todolist items*/
+.input-controller textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  padding-top:15px;
+  padding-left: 15px;
+  line-height: 1.4;
+  color: rgb(8, 0, 0);
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 30px;
+  font-family: inherit;
+  transition: all 0.30s ease-in-out;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.edit-controller {
+  display: flex;
+  gap: 5px;
+}
+
+.update-controller {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .app {
+    width: 95%;
+    text-align: center;
+  }
+
+  .input-header {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .to-do-input {
+    display: flex;
+  }
+
+  .to-do-input input {
+    width: 300px;
+  }
+
+}
